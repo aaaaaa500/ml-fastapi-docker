@@ -58,3 +58,37 @@ Example response:
   "class_name": "setosa"
 }
 ```
+
+## SIS-3: Streamlit frontend and MLflow
+
+This part extends the project with a simple Streamlit frontend and MLflow integration (experiment tracking and model registry).
+
+### Install extra libraries
+
+```bash
+pip install -r requirements-sis3.txt
+```
+
+### Train the model with MLflow tracking
+
+```bash
+python train.py
+```
+
+This creates the MLflow experiment `iris-classification`, logs the parameters (`n_estimators`, `max_depth`, `random_state`), the metrics (accuracy, F1-score) and the model artifact, and registers the model as `iris-classifier` in the MLflow Model Registry.
+
+### Open the MLflow UI
+
+```bash
+mlflow ui --backend-store-uri sqlite:///mlflow.db
+```
+
+Open http://127.0.0.1:5000 to see the experiment, the run and the registered model.
+
+### Run the Streamlit frontend
+
+```bash
+streamlit run app.py
+```
+
+Open http://localhost:8501, enter the flower sizes and press Predict.

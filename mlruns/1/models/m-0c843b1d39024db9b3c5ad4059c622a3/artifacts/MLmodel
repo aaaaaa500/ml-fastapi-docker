@@ -1,0 +1,24 @@
+artifact_path: file:///C:/Users/alua/Desktop/ML/ml-fastapi-docker/mlruns/1/models/m-0c843b1d39024db9b3c5ad4059c622a3/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.11.9
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.1
+    skops_trusted_types:
+    - sklearn.tree._tree.Tree
+mlflow_version: 3.18.0
+model_id: m-0c843b1d39024db9b3c5ad4059c622a3
+model_size_bytes: 1833853
+model_uuid: m-0c843b1d39024db9b3c5ad4059c622a3
+prompts: null
+run_id: 0ee8196ff470409cab8b4b17871caacd
+utc_time_created: '2026-11-26 20:05:09.799534'
